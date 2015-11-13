@@ -4,11 +4,11 @@ def CaesarCipher(str,num):
     for letter in str:
         if letter.lower() in list_letter:
 	    if list_letter.index(letter.lower()) + num > 25:
-	        str_out = str_out + chr(ord(letter)-25+num) 
+	        str_out = str_out + chr(ord(letter)-26+num) 
 	    else: 
 	        str_out = str_out + chr(ord(letter) + num) 
         else:
 	    str_out = str_out + letter
     return str_out
 print CaesarCipher("Hello",4)
-print CaesarCipher("abcz", 0)
+print CaesarCipher("dogs" , 8)
